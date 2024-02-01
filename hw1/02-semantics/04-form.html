@@ -7,49 +7,87 @@
     <link rel="stylesheet" type="text/css" href="../../styles.css" />
   </head>
   <body>
-    <!-- Exercise: Fix all semantics issues in the following HTML structure -->
     <main>
       <h1>04 - Form</h1>
       <form>
         <h2>Create a new database</h2>
-        <div>Organization</div>
-        <input type="text" />
-        <div>Database name</div>
-        <input type="text" />
-        <div>
-          Lowercase alphanumeric characters, dashes and underscores only
+        <div class="form-group">
+          <label for="organization">Organization</label>
+          <input id="organization" type="text" name="organization" />
         </div>
-        <div>Region</div>
-        <input type="text" />
-        <div>
-          For best performance, enter a region closest to your application
+        <div class="form-group">
+          <label for="database-name">Database name</label>
+          <input
+            id="database-name"
+            type="text"
+            name="database-name"
+            aria-describedby="database-name-desc"
+          />
+          <small id="database-name-desc"
+            >Lowercase alphanumeric characters, dashes, and underscores
+            only</small
+          >
         </div>
-        <div>
-          <div>Plan type</div>
-          <input type="radio" />
-          <label for="basic">Basic</label>
-          <input type="radio" />
-          <label for="business">Business</label>
-          <input type="radio" />
-          <label for="pro">Pro</label>
+        <div class="form-group">
+          <label for="region">Region</label>
+          <input
+            id="region"
+            type="text"
+            name="region"
+            aria-describedby="region-desc"
+          />
+          <small id="region-desc"
+            >For best performance, enter a region closest to your
+            application</small
+          >
         </div>
-        <div>
-          <div>Included Fields</div>
-          <input type="checkbox" />
-          <label>Name</label>
-          <input type="checkbox" />
-          <label>Role</label>
-          <input type="checkbox" />
-          <label>Email</label>
-          <input type="checkbox" />
-          <label>Company Name</label>
-          <input type="checkbox" />
-          <label>Description</label>
-          <input type="checkbox" />
-          <label>Type</label>
-        </div>
-        <button>Create</button>
-        <button>Reset</button>
+
+        <fieldset>
+          <legend>Plan type</legend>
+          <div class="form-radio">
+            <input id="basic" type="radio" name="plan-type" />
+            <label for="basic">Basic</label>
+          </div>
+          <div class="form-radio">
+            <input id="business" type="radio" name="plan-type" />
+            <label for="business">Business</label>
+          </div>
+          <div class="form-radio">
+            <input id="pro" type="radio" name="plan-type" />
+            <label for="pro">Pro</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Included Fields</legend>
+          <div class="form-checkbox">
+            <input id="name" type="checkbox" name="included-fields" />
+            <label for="name">Name</label>
+          </div>
+          <div class="form-checkbox">
+            <input id="role" type="checkbox" name="included-fields" />
+            <label for="role">Role</label>
+          </div>
+          <div class="form-checkbox">
+            <input id="email" type="checkbox" name="included-fields" />
+            <label for="email">Email</label>
+          </div>
+          <div class="form-checkbox">
+            <input id="company-name" type="checkbox" name="included-fields" />
+            <label for="company-name">Company Name</label>
+          </div>
+          <div class="form-checkbox">
+            <input id="description" type="checkbox" name="included-fields" />
+            <label for="description">Description</label>
+          </div>
+          <div class="form-checkbox">
+            <input id="type" type="checkbox" name="included-fields" />
+            <label for="type">Type</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Create</button>
+        <button type="reset">Reset</button>
       </form>
     </main>
   </body>
