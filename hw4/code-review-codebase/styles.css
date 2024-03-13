@@ -9,6 +9,7 @@
   --transparent: rgba(0, 0, 0, 0);
   --light-gray: rgb(226, 226, 226);
   --darker-blue-even-transpaent: rgb(25, 20, 101, 0.2);
+  --redd: rgb(255, 0, 0, 0.5);
 }
 
 html {
@@ -25,7 +26,12 @@ body {
 
 .dark-background-container {
   background: var(--dark-blue);
-  background: linear-gradient(34deg, var(--dark-blue) 6%, var(--blue) 46%, var(--purple) 91%);
+  background: linear-gradient(
+    34deg,
+    var(--dark-blue) 6%,
+    var(--blue) 46%,
+    var(--purple) 91%
+  );
   color: var(--white);
 }
 
@@ -149,7 +155,7 @@ body {
   position: fixed;
   width: 100%;
   padding: 15px;
-  background-color: var(--darker-blue);
+  background-color: var(--redd);
   box-sizing: border-box;
 }
 
